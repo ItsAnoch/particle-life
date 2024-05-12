@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle System</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .canvas-container {
+            flex: 1;
+        }
+
+        #canvas {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #control-center {
+            flex: 0 0 300px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-left: 1px solid #ccc;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .fundamentals {
+            margin-bottom: 20px;
+        }
+
+        .fundamental-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .fundamental-section label {
+            flex: 1;
+        }
+
+        .fundamental-section input[type="number"],
+        .fundamental-section input[type="range"] {
+            flex: 2;
+            margin-left: 10px;
+        }
+
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+
+        .color-slider {
+            width: 100%;
+            height: 3px;
+            background-color: #ddd;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .color-slider-thumb {
+            width: 10px;
+            height: 10px;
+            background-color: #007bff;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            transform: translateX(-50%);
+        }
+
+        #interaction-table {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        #randomize {
+            width: 100%;
+            height: 30px;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: fixed;
+            top: 20px;
+        }
+
+        /* Media query for smaller screen sizes */
+        @media screen and (max-width: 600px) {
+            body {
+                flex-direction: column;
+                overflow-y: scroll;
+            }
+
+            #control-center {
+                flex: 0 0 auto; /* Allow control center to grow vertically */
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #ccc;
+            }
+
+            #canvas {
+                height: 100vh; /* Reduce canvas height for smaller screens */
+            }
+        }
+    </style>
+    <script defer src="./dist/index.js"></script>
+</head>
+<body>
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div id="control-center">
+        <h2>Control Center</h2>
+        <div class="fundamentals">
+            <div class="fundamental-section">
+                <label for="particle-count">Particle Count</label>
+                <input id="particle-count" type="number" value="1000">
+            </div>
+
+            <div class="fundamental-section">
+                <label for="colour-count"># of Colors</label>
+                <input id="colour-count" type="number" value="5">
+            </div>
+ 
+            <div class="fundamental-section">
+                <label for="friction">Friction</label>
+                <input id="friction" type="number" value="0.5">
+            </div>
+
+            <button id="randomize">Randomize</button>
+        </div>
+
+        <div id="interaction-table">
+            <!-- Interaction values will be added dynamically here -->
+        </div>
+
+        <footer>Made with ❤️ by Anoch</footer>
+    </div>
+</body>
+</html>

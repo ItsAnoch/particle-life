@@ -1,0 +1,18 @@
+{
+  "name": "particle_life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bun-types": "^1.1.6",
+    "typescript": "^5.4.5",
+    "undici-types": "^5.26.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "tsc --outDir ./dist -w index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
