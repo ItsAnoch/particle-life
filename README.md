@@ -1,6 +1,8 @@
 # Particle Life Demo
 Particle life is a simple rule-based simulation of atom-like particles. Complex behaviors and structures form from the primitive attraction and repulsion forces. This is my attempt to create a version of it.
 
+[Visit Live Demo](https://itsanoch.github.io/particle-life/)
+
 [I was inspired by Digital Genius's particle life system](https://www.youtube.com/watch?v=4vk7YvBYpOs&t=305s)
 
 ## Observations
